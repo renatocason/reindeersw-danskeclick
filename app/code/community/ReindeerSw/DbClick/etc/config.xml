@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 Reindeer Software (http://reindeersw.com)
+ */
+-->
+<config>
+    <modules>
+        <ReindeerSw_DbClick>
+            <version>0.1.0.0</version>
+        </ReindeerSw_DbClick>
+    </modules>
+    <global>
+        <models>
+            <reindeersw_dbclick>
+                <class>ReindeerSw_DbClick_Model</class>
+            </reindeersw_dbclick>
+        </models>
+        <helpers>
+            <reindeersw_dbclick>
+                <class>ReindeerSw_DbClick_Helper</class>
+            </reindeersw_dbclick>
+        </helpers>
+        <blocks>
+            <reindeersw_dbclick>
+                <class>ReindeerSw_DbClick_Block</class>
+            </reindeersw_dbclick>
+        </blocks>
+    </global>
+    <default>
+        <payment>
+            <reindeersw_dbclick>
+                <model>reindeersw_dbclick/standard</model>
+                <active>0</active>
+                <payment_action>sale</payment_action>
+                <title>DanskeBank Click</title>
+                <submit_url>https://ebankas.danskebank.lt/ib/site/ibpay/login</submit_url>
+                <vk_snd_id></vk_snd_id>
+                <allowspecific>0</allowspecific>
+                <sort_order>1</sort_order>
+            </reindeersw_dbclick>
+        </payment>
+    </default>
+    <frontend>
+        <routers>
+            <reindeersw_dbclick>
+                <use>standard</use>
+                <args>
+                    <module>ReindeerSw_DbClick</module>
+                    <frontName>dbclick</frontName>
+                </args>
+            </reindeersw_dbclick>
+        </routers>
+    </frontend>
+</config>

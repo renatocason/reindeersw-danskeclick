@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <ReindeerSw_DbClick>
+            <active>true</active>
+            <codePool>community</codePool>
+        </ReindeerSw_DbClick>
+    </modules>
+</config>
